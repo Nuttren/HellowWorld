@@ -106,8 +106,8 @@ public class Main {
 
     private static void task2() {
         float a = 27.12f;
-        long b = 987678965549l; // 987 678 965 549 не влезает в эту переменную
-        double c = 2.786f;
+        long b = 987678965549l;
+        double c = 2.786;
         short d = 569;
         short e = -159;
         short f = 27897;
