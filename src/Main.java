@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,8 +35,8 @@ public class Main {
     }
 
     private static void task7() {
-        float weightLose1 = 250;
-        float weightLose2 = 500;
+        float weightLose1 = 250f;
+        float weightLose2 = 500f;
         int extraWeight = 7000;
         float scenarioOne = extraWeight / weightLose1;
         float scenarioTwo = extraWeight / weightLose2;
@@ -105,7 +106,7 @@ public class Main {
 
     private static void task2() {
         float a = 27.12f;
-        long b = 987678965; // 987 678 965 549 не влезает в эту переменную
+        long b = 987678965549l; // 987 678 965 549 не влезает в эту переменную
         double c = 2.786f;
         short d = 569;
         short e = -159;
