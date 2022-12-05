@@ -15,7 +15,7 @@ public class Main {
     }
 
     private static void task7() {
-        int one = 10;
+        int one = 11;
         int two =5;
         int tree = 3;
         if (one>two && one>tree) {
