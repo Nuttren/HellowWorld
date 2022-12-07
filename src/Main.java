@@ -13,7 +13,7 @@ public class Main {
     }
 
     private static void task5() {
-        int monthNumber = 13;
+        int monthNumber = 12;
         switch (monthNumber) {
             case 1:
                 System.out.println("Зима");
