@@ -57,7 +57,7 @@ public class Main {
     }
 
     private static void task4() {
-        int distance = 110;
+        int distance = 25;
         if (distance < 20) {
             System.out.println("Потребуется: одни сутки"); }
                      if (distance > 20 && distance < 60) {
@@ -74,15 +74,18 @@ public class Main {
 
 
     private static void task3() {
-        char year = 2024;
+        int year = 2083;
         if (year % 4 == 0) {
             if ((year % 100 != 0) && (year % 400 != 0)) {
                 System.out.println("Високосный");
-            } else {
+            }
+            else System.out.println("Невисокосный");
+        }
+            if (year % 4 != 0) {
                 System.out.println("Невисокосный");
             }
         }
-    }
+
 
 
     private static void task2() {
