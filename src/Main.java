@@ -13,7 +13,7 @@ public class Main {
     }
 
     private static void task5() {
-        int monthNumber = 12;
+        int monthNumber = 3;
         switch (monthNumber) {
             case 1:
                 System.out.println("Зима");
@@ -60,15 +60,15 @@ public class Main {
         int distance = 25;
         if (distance < 20) {
             System.out.println("Потребуется: одни сутки"); }
-                     if (distance > 20 && distance < 60) {
-                        System.out.println("Потребуется: двое суток");
-                    }
-                    if (distance > 60 && distance < 100) {
-                        System.out.println("Потребуется: трое суток");
-                    }
-                    if (distance > 100) {
-                     System.out.println("Доставки нет");
-                    }
+        if (distance > 20 && distance < 60) {
+            System.out.println("Потребуется: двое суток");
+        }
+        if (distance > 60 && distance < 100) {
+            System.out.println("Потребуется: трое суток");
+        }
+        if (distance > 100) {
+            System.out.println("Доставки нет");
+        }
         }
 
 
@@ -89,7 +89,7 @@ public class Main {
 
 
     private static void task2() {
-        char clientOS = 1;
+        char clientOS = 0;
         char clientDeviceYear = 2016;
         if (clientOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
