@@ -7,9 +7,59 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+        task7();
 
 
 
+
+    }
+
+    private static void task7() {
+        int sec = 7925;
+        int secInHour = 3600;
+        int totalWorkingHours = 8;
+        int restWorkSec = secInHour * totalWorkingHours - sec;
+        float restWorkHour = totalWorkingHours - sec / secInHour;
+        {
+            if ((sec >= 0) && (sec < secInHour * totalWorkingHours)) {
+                System.out.println("До конца рабочего дня осталось " + restWorkSec + " секунд");}
+            if ((sec >= 0) && (sec < secInHour * totalWorkingHours)) {
+                System.out.println("До конца рабочего дня осталось " + restWorkHour + " часов");}
+            else {
+                    System.out.println("Рабочий день не начался");
+                }
+            }
+
+    }
+
+    private static void task6() {
+        int a = 87;
+        int b = 3;
+        int c = -1268;
+        if (a>=b && a>=c) {
+            if (b>=c) {
+                System.out.println(c + " " + b + " " + a);
+            } else {
+                System.out.println(b + " " + c + " " + a);
+            }
+        }
+        if (b>=a && b>=c) {
+            if (a>=c) {
+                System.out.println(c + " " + a + " " +b);
+            }
+            if (c>=a) {
+                System.out.println(a + " " + c + " " +b);
+            }
+        }
+        if (c>=a && c>=b) {
+            if (a>=b) {
+                System.out.println(b + " " + a +" " + c);
+            }
+            if (b>=a) {
+                System.out.println(a + " " + b +" " + c);
+            }
+        }
     }
 
     private static void task5() {
