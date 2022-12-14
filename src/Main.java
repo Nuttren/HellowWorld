@@ -11,16 +11,32 @@ public class Main {
         task8();
         task9();
         task10 ();
+        task11();
+
 
 
     }
 
-    private static void task10() {
-        int i = 5;
-        while (i < 9) {
-            System.out.println(i);
-            i++;
+    private static void task11() {
+        int num = 1;
+        int step = 2;
+        int quantity = 10;
+        for (int i = 0; i < quantity; i++) {
+            System.out.print(num + " ");
+            num += step;
         }
+        System.out.println();
+    }
+
+    private static void task10() {
+        int monthDuration = 31;
+        int currentDay = 1;
+        int daysOfWeek = 7;
+        while (currentDay <= monthDuration) {
+            System.out.print(currentDay + " " + (currentDay + 1) + " ");
+            currentDay += daysOfWeek;
+        }
+        System.out.println();
     }
 
     private static void task9() {
