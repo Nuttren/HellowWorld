@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,132 +7,96 @@ public class Main {
         task2();
         task3();
         task4();
-        task6();
-        task7();
-        task8();
-        task9();
-        task10 ();
-        task11();
-
 
 
     }
 
-    private static void task11() {
-        int num = 1;
-        int step = 2;
-        int quantity = 10;
-        for (int i = 0; i < quantity; i++) {
-            System.out.print(num + " ");
-            num += step;
-        }
-        System.out.println();
-    }
-
-    private static void task10() {
-        int monthDuration = 31;
-        int currentDay = 1;
-        int daysOfWeek = 7;
-        while (currentDay <= monthDuration) {
-            System.out.print(currentDay + " " + (currentDay + 1) + " ");
-            currentDay += daysOfWeek;
-        }
-        System.out.println();
-    }
-
-    private static void task9() {
-        int userWantsToContinue = 1;
-        int level = 1;
-        do {
-            System.out.println("Завершен уровень " + level);
-            System.out.println("Хотите продолжить?");
-            level++;
-        }
-            while (userWantsToContinue == 1 && level < 5) ;
-        }
-
-
-
-    private static void task8() {
-        for (int yearPast = 1822; yearPast <= 2022; yearPast++) {
-            if (yearPast % 79 == 0) {
-                System.out.println(yearPast);
+    private static void task4() {
+        int[] nums = {1, 2, 3};
+        for (int index = 0; index < nums.length; index++) {
+            if (nums[index] % 2 != 0) {
+                System.out.print(nums[index] + 1 + ",");
             }
-        }
-        for (int year = 2022; year <= 2122; year++) {
-            if (year % 79 == 0) {
-                System.out.println(year);
+            else {
+                System.out.print(nums[index] + ",");
             }
         }
     }
 
 
-
-
-
-
-    private static void task7() {
-        for (int i = 5; i <= 31; i++) {
-            if (i % 7 ==0) {
-                System.out.println("Сегодня пятница " + i + " число, пора готовить отчет");
-            }
-        }
-    }
-
-    private static void task6() {
-        int total = 15_000;
-        for (double i=1; i <=9; i = i + 0.5) {
-            total = total + total * 7/100; {
-                System.out.println("Год " + i + ", баланс равен " + total);
-            }
-        }
-    }
-
-    private static void task4() { // вместе 4 и 5
-
-        int total = 15_000;
-        for (int i=1; total <= 12_000_000; i++) {
-            total = total + total * 7/100;
-            if (i % 6 ==0) {
-                System.out.println("Год " + i + ", баланс равен " + total);
-            }
-        }
-    }
 
     private static void task3() {
-        int population = 12_000_000;
-        int birth = population * 17 / 1000;
-        int death = population * 8 / 1000;
-        int i = 1;
-        while (i <= 10) {
-            System.out.println("Год " + i + ", численность населения составляет " + population);
-            i = i+1;
-            population = population + birth - death;
+        {
+            int[] nums = {1, 2, 3};
+            for (int index = 2; index <= nums.length; index = index - 1) {
+                if (index == nums.length - 3) {
+                    System.out.print(nums[index]);
+                    System.out.println();
+                    break;
+                }
+                {
+                    System.out.print(nums[index] + ",");
+                }
+            }
+        }
+
+        {
+            double[] nums2 = {1.57, 7.64, 9.986};
+            for (int index2 = 2; index2 < nums2.length; index2 = index2 - 1) {
+                if (index2 == nums2.length - 3) {
+                    System.out.print(nums2[index2]);
+                    System.out.println();
+                    break;
+                }
+                {
+                    System.out.print(nums2[index2] + ",");
+                }
+            }
+        }
+        {
+            int[] nums3 = new int[10];
+            nums3[0] = 5;
+            for (int index3 = 9; index3 <= nums3.length; index3 = index3 - 1) {
+                if (index3 == nums3.length - 10) {
+                    System.out.print(nums3[index3]);
+                    System.out.println();
+                    break;
+                }
+                {
+                    System.out.print(nums3[index3] + ",");
+                }
+            }
         }
     }
-
 
     private static void task2() {
-        int i = 1;
-            while (i <= 10) {
-                System.out.print(i);
-                i = i + 1;
+        int[] nums = new int[]{1, 2, 3};
+            for (int index = 0; index <= nums.length; index = index + 1) {
+                if (index == nums.length - 1) {
+                    System.out.print(nums[index]);
+                    System.out.println();
+                    break;
+                }
+                {
+                    System.out.print(nums[index] + ",");
+                }
             }
-        System.out.println();
-        for (int s = 10; s >= 1; s = s - 1) {
-            System.out.print(s);
+            double[] nums2 = {1.57, 7.64, 9.986};
+            {
+                System.out.println(Arrays.toString(nums2));
+            }
+            int[] nums3 = new int[10];
+            nums3[0] = 5;
+            {
+                System.out.println(Arrays.toString(nums3));
+            }
+        }
+
+
+        private static void task1 () {
+            int[] nums = new int[]{1, 2, 3};
+            double[] nums2 = {1.57, 7.64, 9.986};
+            int[] nums3 = new int[10];
+
         }
     }
-
-
-
-    private static void task1() {
-        int salary = 0;
-        int i = 0;
-        while (salary < 2_459_000) {
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + salary + " рублей");
-            salary = salary + 15_000;
-            i = i+1;
-        }
-    }
-}
