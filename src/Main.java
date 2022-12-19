@@ -12,11 +12,11 @@ public class Main {
     }
 
     private static void task4() {
-        int[] nums = {1, 2, 3};
+        int[] nums = {3, 2, 5};
         for (int index = 0; index < nums.length; index++) {
-            if (nums[index] % 2 != 0 && index != nums.length - 3) {
+            if (nums[index] % 2 != 0 && index == nums.length - 1) {
                 System.out.print(nums[index] + 1 + " ");
-            } else if (nums[index] % 2 != 0 && index == nums.length - 3)
+            } else if (nums[index] % 2 != 0 && index != nums.length - 1)
                 System.out.print(nums[index] + 1 + ",");
                else { System.out.print(nums[index] + ",");
             }
