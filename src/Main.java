@@ -14,10 +14,11 @@ public class Main {
     private static void task4() {
         int[] nums = {1, 2, 3};
         for (int index = 0; index < nums.length; index++) {
-            if (nums[index] % 2 != 0) {
+            if (nums[index] % 2 != 0 && index != nums.length - 3) {
                 System.out.print(nums[index] + 1 + " ");
-            } else {
-                System.out.print(nums[index] + " ");
+            } else if (nums[index] % 2 != 0 && index == nums.length - 3)
+                System.out.print(nums[index] + 1 + ",");
+               else { System.out.print(nums[index] + ",");
             }
         }
     }
