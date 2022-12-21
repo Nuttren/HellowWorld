@@ -22,7 +22,7 @@ public class Main {
         float sum = 0;
         float sumAverage = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[1];
+            sum += arr[1];
            sumAverage = sum / arr.length;
         }
         {
