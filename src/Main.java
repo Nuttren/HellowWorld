@@ -32,8 +32,8 @@ public class Main {
 
     private static void task2() {
         int[] arr = generateRandomArray();
-        float sumMin = 200_000;
-        float sumMax = 0;
+        int sumMin = 200_000;
+        int sumMax = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > sumMax) {
                 sumMax = arr[i];
