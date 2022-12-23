@@ -22,9 +22,9 @@ public class Main {
         float sum = 0;
         float sumAverage = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[1];
-           sumAverage = sum / arr.length;
+            sum += arr[i];
         }
+        sumAverage = sum / arr.length;
         {
             System.out.println("Средняя сумма за месяц составила " + sumAverage + " рублей");
         }
@@ -53,7 +53,7 @@ public class Main {
             int[] arr = generateRandomArray();
             int sum = 0;
             for (int element: arr) {
-                sum += arr[1];
+                sum += element;
             }
             {
                 System.out.println("Сумма за месяц составила " + sum + " рублей");
