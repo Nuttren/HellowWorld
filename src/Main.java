@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Main {
@@ -31,25 +32,25 @@ public class Main {
         deliveryTime(deliveryDistance);
     }
 
-    private static void checkDevice(int clientDeviceYear, int system) {
-        if (clientDeviceYear < 2015 && system == 0) {
+    private static void checkDevice(int currentYear, int system) {
+        if (currentYear < 2015 && system == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        if (clientDeviceYear >= 2015 && system == 0) {
+        if (currentYear >= 2015 && system == 0) {
             System.out.println("Установите обычную версию приложения для iOS по ссылке");
         }
-        if (clientDeviceYear < 2015 && system == 1) {
+        if (currentYear < 2015 && system == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
-        if (clientDeviceYear >= 2015 && system == 1) {
+        if (currentYear >= 2015 && system == 1) {
             System.out.println("Установите обычную версию приложения для Android по ссылке");
         }
     }
 
     private static void task2() {
-        int clientDeviceYear = 2014;
-        int system = 1;
-        checkDevice(clientDeviceYear, system);
+        int currentYear = LocalDate.now().getYear();
+        int system = 0;
+        checkDevice(currentYear, system);
 
     }
 
