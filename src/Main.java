@@ -21,19 +21,26 @@ public class Main {
                                 "Car brand №" + i,
                                 "Car moder №" + i,
                                 1.6,
-                                carDriver
+                                carDriver,
+                                Cars.typeOfCar.SEDAN,
+                                Type.Cars
                         );
                         Trucks truck = new Trucks(
                                 "Truck brand №" + i,
                                 "Truck model №" + i,
                                 2,
-                                truckDriver
+                                truckDriver,
+                                Trucks.loadСapacity.N3,
+                                Type.Trucks
                         );
                         Buses bus = new Buses(
                                 "Bus brand №" + i,
                                 "Bus moder №" + i,
                                 1.7,
-                                busDriver
+                                busDriver,
+                                Buses.numberOfSeats.LARGE,
+                                Type.Buses
+
                         );
                        System.out.println(car);
                         System.out.println(truck);
@@ -41,12 +48,16 @@ public class Main {
                         printInfo(car);
                         printInfo(truck);
                         printInfo(bus);
+                        car.printType(Type.Cars);
+                        truck.printType(Type.Trucks);
+                        bus.printType(Type.Buses);
                 }
 
         }
         public static void printInfo (Transport <?> transport) {
                 System.out.println(transport.getDriver().getName() + " управляет автомобилем " + transport.getBrand() + " и будет участвовать в заезде");
         }
+
 }
 
 

@@ -1,10 +1,11 @@
 package Transport;
 
-public class Buses extends Transport <BusesDrivers>{
+public class Buses extends Transport <BusesDrivers> {
 
 
-    public Buses(String brand, String model, double engineSize, BusesDrivers driver) {
+    public Buses(String brand, String model, double engineSize, BusesDrivers driver, numberOfSeats numberOfSeats, Type type) {
         super(brand, model, engineSize, driver);
+        getType();
     }
 
     @Override
@@ -28,4 +29,59 @@ public class Buses extends Transport <BusesDrivers>{
         int maxSpeed = (int) (minBound + (maxBound - minBound) * Math.random());
         System.out.println("Наибольшая скорость для автобуса " + maxSpeed);
     }
+
+
+    public enum numberOfSeats {
+        VERYSMALL(0, 10),
+        SMALL(0, 25),
+        MIDDLE(25, 50),
+        LARGE(50, 80),
+        VERYLARGE(80, 120);
+
+
+        @Override
+        public String toString() {
+            if (minSeats >= 0 && maxSeats <= 10) {
+                return "Максимальная вместимость: " +
+                        +maxSeats +
+                        ' ';
+            }
+            if (minSeats >= 0 && maxSeats <= 25) {
+                return "Максимальная вместимость: " +
+                        +maxSeats +
+                        ' ';
+            }
+            if (minSeats > 25) {
+                return "Вместимость: {" +
+                        minSeats + '\'' +
+                        " - " + '\'' +
+                        maxSeats + '\'' +
+                        ' ';
+            }
+            return null;
+        }
+
+        private int minSeats;
+        private int maxSeats;
+
+        numberOfSeats(int minSeats, int maxSeats) {
+            this.minSeats = minSeats;
+            this.maxSeats = maxSeats;
+
+        }
+
+        public static void main(String[] args) {
+            System.out.println(numberOfSeats.VERYSMALL);
+        }
+    }
+    @Override
+    void getType() {
+
+    }
+
+    @Override
+    public void printType(Type type) {
+        System.out.println(type.name());
+    }
+
 }

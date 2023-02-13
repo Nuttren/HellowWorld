@@ -1,6 +1,6 @@
 package Transport;
 
-public abstract class Transport <T extends Driver> implements Compatible{
+public abstract class Transport  <T extends Driver> implements Compatible{
 
     private String Brand;
 
@@ -9,12 +9,12 @@ public abstract class Transport <T extends Driver> implements Compatible{
         return "Transport{" +
                 "Brand='" + Brand + '\'' +
                 ", Model='" + Model + '\'' +
-                ", engineVolume=" + engineVolume +
+                ", engineSize=" + engineSize + '\'' +
                 '}';
     }
 
     private String Model;
-    private double engineVolume;
+    private double engineSize;
 
     private T driver;
 
@@ -29,7 +29,7 @@ public abstract class Transport <T extends Driver> implements Compatible{
     public Transport(String brand, String model, double engineSize, T driver) {
         Brand = (brand == null || brand.length() == 0 ? "Default" : brand);;
         Model = (model == null || brand.length() == 0 ? "Default" : model);;
-        this.engineVolume = (engineVolume <= 1 ? 1.7 : engineVolume);
+        this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
     }
 
@@ -48,8 +48,8 @@ public abstract class Transport <T extends Driver> implements Compatible{
         return Model;
     }
 
-    public double getEngineVolume() {
-        return engineVolume;
+    public double getEngineSize() {
+        return engineSize;
     }
     public void setBrand(String brand) {
         Brand = brand;
@@ -59,10 +59,12 @@ public abstract class Transport <T extends Driver> implements Compatible{
         Model = model;
     }
 
-    public void setEngineVolume(double engineVolume) {
-        this.engineVolume = engineVolume;
+    public void setEngineSize(double engineSize) {
+        this.engineSize = engineSize;
     }
 
+    abstract void getType();
 
+    abstract void printType(Type type);
 
 }

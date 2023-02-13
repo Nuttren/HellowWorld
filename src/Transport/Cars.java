@@ -2,9 +2,9 @@ package Transport;
 
 public class Cars extends Transport <CarsDrives>{
 
-
-    public Cars(String brand, String model, double engineSize, CarsDrives driver) {
+    public Cars(String brand, String model, double engineSize, CarsDrives driver, typeOfCar typeOfCar, Type type) {
         super(brand, model, engineSize, driver);
+        getType();
     }
 
     @Override
@@ -28,5 +28,57 @@ public class Cars extends Transport <CarsDrives>{
         int maxSpeed = (int) (minBound + (maxBound - minBound) * Math.random());
         System.out.println("Наибольшая скорость для автомобиля " + maxSpeed);
     }
+
+
+    public enum typeOfCar {
+        SEDAN ("Седан"),
+        HETCHBACK ("Хетчбэк"),
+        COUPE ("Купе"),
+        WAGON ("Универсал"),
+        SUV ("Внедорожник"),
+        CROSSOVER ("Кроссовер"),
+        PICKUP ("Пикап"),
+        VAN ("Фургон"),
+        MINIVAN ("Минивен"),
+        ;
+
+
+        public String getTypeOfCar() {
+            return typeOfCar;
+        }
+
+        @Override
+        public String toString() {
+            return "Type{" +
+                    "Тип кузова: " + typeOfCar + '\'' +
+                    '}';
+        }
+
+        private String typeOfCar;
+
+
+        typeOfCar(String typeOfCar) {
+
+            this.typeOfCar = typeOfCar;
+        }
+        public String getCarType() {
+            return typeOfCar;
+        }
+
+        public void setType(String type) {
+            this.typeOfCar = typeOfCar;
+        }
+    }
+    @Override
+    void getType() {
+
+    }
+
+    @Override
+    public void printType(Type type) {
+        System.out.println(type.name());
+    }
+
+
 }
 
