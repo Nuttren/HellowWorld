@@ -84,7 +84,9 @@ public class Trucks extends Transport <TrucksDrives> {
 
     @Override
     public void printType(Type type) {
+        if (Type.TRUCKS.getType() != null)
         System.out.println(Type.TRUCKS.getType());
+        else System.out.println("Тип транспортного средства не указан");
     }
 
 }
