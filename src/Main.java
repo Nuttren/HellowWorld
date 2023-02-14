@@ -23,7 +23,7 @@ public class Main {
                                 1.6,
                                 carDriver,
                                 Cars.typeOfCar.SEDAN,
-                                Type.Cars
+                                Type.CARS
                         );
                         Trucks truck = new Trucks(
                                 "Truck brand №" + i,
@@ -31,7 +31,7 @@ public class Main {
                                 2,
                                 truckDriver,
                                 Trucks.loadСapacity.N3,
-                                Type.Trucks
+                                Type.TRUCKS
                         );
                         Buses bus = new Buses(
                                 "Bus brand №" + i,
@@ -39,7 +39,7 @@ public class Main {
                                 1.7,
                                 busDriver,
                                 Buses.numberOfSeats.LARGE,
-                                Type.Buses
+                                Type.BUSES
 
                         );
                        System.out.println(car);
@@ -48,9 +48,9 @@ public class Main {
                         printInfo(car);
                         printInfo(truck);
                         printInfo(bus);
-                        car.printType(Type.Cars);
-                        truck.printType(Type.Trucks);
-                        bus.printType(Type.Buses);
+                        car.printType(Type.CARS);
+                        truck.printType(Type.TRUCKS);
+                        bus.printType(Type.BUSES);
                 }
 
         }

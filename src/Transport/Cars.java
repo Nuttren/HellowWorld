@@ -76,7 +76,7 @@ public class Cars extends Transport <CarsDrives>{
 
     @Override
     public void printType(Type type) {
-        System.out.println(type.name());
+        System.out.println(Type.CARS.getType());
     }
 
 

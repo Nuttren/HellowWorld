@@ -81,7 +81,8 @@ public class Buses extends Transport <BusesDrivers> {
 
     @Override
     public void printType(Type type) {
-        System.out.println(type.name());
+
+        System.out.println(Type.BUSES.getType());
     }
 
 }
