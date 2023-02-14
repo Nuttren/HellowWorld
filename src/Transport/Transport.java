@@ -65,6 +65,6 @@ public abstract class Transport  <T extends Driver> implements Compatible{
 
     abstract void getType();
 
-    abstract void printType(Type type);
+    public abstract void printType();
 
 }

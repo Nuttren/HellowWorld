@@ -80,7 +80,7 @@ public class Buses extends Transport <BusesDrivers> {
     }
 
     @Override
-    public void printType(Type type) {
+    public void printType() {
         if (Type.BUSES.getType() != null)
         System.out.println(Type.BUSES.getType());
         else System.out.println("Тип транспортного средства не указан");

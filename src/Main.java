@@ -48,9 +48,9 @@ public class Main {
                         printInfo(car);
                         printInfo(truck);
                         printInfo(bus);
-                        car.printType(Type.CARS);
-                        truck.printType(Type.TRUCKS);
-                        bus.printType(Type.BUSES);
+                        car.printType();
+                        truck.printType();
+                        bus.printType();
                 }
 
         }
