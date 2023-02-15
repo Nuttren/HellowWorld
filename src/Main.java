@@ -3,7 +3,7 @@ import Transport.*;
 import java.util.Arrays;
 
 public class Main {
-        public static void main(String[] args) {
+        public static void main(String[] args) throws TransportTypeException {
                 for (int i = 1; i<=4; i++) {
                         CarsDrives carDriver = new CarsDrives(
                                 "Водитель автомобиля №"+i,
@@ -51,6 +51,9 @@ public class Main {
                         car.printType();
                         truck.printType();
                         bus.printType();
+                        car.passDiagnostic();
+                        bus.passDiagnostic();
+                        truck.passDiagnostic();
                 }
 
         }

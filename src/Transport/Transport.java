@@ -66,5 +66,6 @@ public abstract class Transport  <T extends Driver> implements Compatible{
     abstract void getType();
 
     public abstract void printType();
+    public abstract void passDiagnostic() throws TransportTypeException;
 
 }

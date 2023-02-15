@@ -89,4 +89,13 @@ public class Trucks extends Transport <TrucksDrives> {
         else System.out.println("Тип транспортного средства не указан");
     }
 
+    @Override
+    public void passDiagnostic() throws TransportTypeException {
+        System.out.println(Type.BUSES.getType() + " должен пройти диагностику диагностику");
+        if (Type.CARS == Type.BUSES) {
+            throw new TransportTypeException(Type.BUSES.getType() + " не должен проходить диагностику");
+        }
+
+    }
+
 }
