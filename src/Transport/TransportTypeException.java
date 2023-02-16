@@ -1,8 +1,8 @@
 package Transport;
 
+import java.io.IOException;
 
-
-public class TransportTypeException extends Exception{
+public class TransportTypeException extends RuntimeException {
     public TransportTypeException() {
     }
 
@@ -17,4 +17,9 @@ public class TransportTypeException extends Exception{
     public TransportTypeException(Throwable cause) {
         super(cause);
     }
+
+    public TransportTypeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
+
 }

@@ -1,5 +1,7 @@
 package Transport;
 
+import java.io.IOException;
+
 public class Buses extends Transport <BusesDrivers> {
 
 
@@ -74,6 +76,7 @@ public class Buses extends Transport <BusesDrivers> {
             System.out.println(numberOfSeats.VERYSMALL);
         }
     }
+
     @Override
     void getType() {
 
@@ -82,17 +85,25 @@ public class Buses extends Transport <BusesDrivers> {
     @Override
     public void printType() {
         if (Type.BUSES.getType() != null)
-        System.out.println(Type.BUSES.getType());
+            System.out.println(Type.BUSES.getType());
         else System.out.println("Тип транспортного средства не указан");
     }
 
     @Override
-    public void passDiagnostic() throws TransportTypeException {
-        if (Type.BUSES == Type.BUSES) {
-            throw new TransportTypeException(Type.BUSES.getType() + " не должен проходить диагностику");
+    public void passDiagnostic() {
+        try {
+            throw new TransportTypeException();
+        } catch (TransportTypeException e) {
+            System.out.println(Type.BUSES.getType() + " не должен проходить диагностику");
         }
 
     }
 }
+
+
+
+
+ //   throw new TransportTypeException(Type.BUSES.getType() + " не должен проходить диагностику");
+
 
 

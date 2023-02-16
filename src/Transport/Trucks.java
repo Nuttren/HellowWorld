@@ -90,11 +90,8 @@ public class Trucks extends Transport <TrucksDrives> {
     }
 
     @Override
-    public void passDiagnostic() throws TransportTypeException {
-        System.out.println(Type.BUSES.getType() + " должен пройти диагностику диагностику");
-        if (Type.CARS == Type.BUSES) {
-            throw new TransportTypeException(Type.BUSES.getType() + " не должен проходить диагностику!");
-        }
+    public void passDiagnostic()  {
+        System.out.println(Type.TRUCKS.getType() + " должен пройти диагностику диагностику");
 
     }
 
