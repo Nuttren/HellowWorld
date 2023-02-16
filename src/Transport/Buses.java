@@ -92,9 +92,9 @@ public class Buses extends Transport <BusesDrivers> {
     @Override
     public void passDiagnostic() {
         try {
-            throw new TransportTypeException();
+            throw new TransportTypeException("Автобус не должен проходить диагностику");
         } catch (TransportTypeException e) {
-            System.out.println(Type.BUSES.getType() + " не должен проходить диагностику");
+            System.out.println(e.getMessage());
         }
 
     }
