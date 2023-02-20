@@ -30,12 +30,12 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         this.driver = driver;
     }
 
-    public Transport(String brand, String model, double engineSize, T drive) {
+    public Transport(String brand, String model, double engineSize, T driver) {
         Brand = (brand == null || brand.length() == 0 ? "Default" : brand);
         Model = (model == null || brand.length() == 0 ? "Default" : model);
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
-        mechanicList();
+
     }
 
 

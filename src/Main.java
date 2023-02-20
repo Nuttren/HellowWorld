@@ -76,7 +76,7 @@ public class Main {
                 System.out.println(transport.getDriver().getName() + " управляет автомобилем " + transport.getBrand() + " и будет участвовать в заезде");
         }
          public static void showDriver (Transport <?> transport) {
-             System.out.println("Автомобиль модели " + transport.getModel() + " управляется водителем " + transport.getDriver().getName() );
+             System.out.println("Автомобиль модели " + transport.getModel() + " управляется водителем " + transport.getDriver().getName());
         }
         public static void showMechanic (Transport <?> transport) {
             System.out.println(Mechanic.getNameMechanic() + " является механиком " + transport.getModel());
