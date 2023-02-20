@@ -95,6 +95,8 @@ public class Buses extends Transport <BusesDrivers> {
             throw new TransportTypeException("Автобус не должен проходить диагностику");
         } catch (TransportTypeException e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Buses.passDiagnostic");
         }
 
     }
