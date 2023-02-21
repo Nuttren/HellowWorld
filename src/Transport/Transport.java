@@ -14,6 +14,7 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
                 "Brand='" + Brand + '\'' +
                 ", Model='" + Model + '\'' +
                 ", engineSize=" + engineSize + '\'' +
+                ", engineSize=" + mechanicList + '\'' +
                 '}';
     }
 
@@ -21,6 +22,7 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
     private double engineSize;
 
     private T driver;
+
 
     public T getDriver() {
         return driver;
@@ -36,7 +38,6 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         Model = (model == null || brand.length() == 0 ? "Default" : model);
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
-        ArrayList<Mechanic> mechanicList = new ArrayList<>();
         mechanicList.add( new Mechanic("Иван Иванов", "Данфсс"));
         mechanicList.add( new Mechanic("Петр петров", "Данфсс"));
     }
@@ -81,6 +82,8 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
     public abstract void printType();
 
     public abstract void passDiagnostic() throws TransportTypeException;
+
+    ArrayList<Mechanic> mechanicList = new ArrayList<>();
 
     public void createMechanic (){
         ArrayList<Mechanic> mechanicList = new ArrayList<>();
