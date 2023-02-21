@@ -6,7 +6,7 @@ public class Buses extends Transport <BusesDrivers> {
 
 
     public Buses(String brand, String model, double engineSize, BusesDrivers driver, numberOfSeats numberOfSeats, Type type) {
-        super(brand, model, engineSize, driver);
+        super(brand, model, engineSize, driver, );
         getType();
     }
 

@@ -27,6 +27,7 @@ public class Main {
                         "Car moder №" + i,
                         1.6,
                         carDriver,
+
                         Cars.typeOfCar.SEDAN,
                         Type.CARS
                 );

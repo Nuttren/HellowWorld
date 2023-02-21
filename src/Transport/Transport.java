@@ -30,13 +30,17 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         this.driver = driver;
     }
 
-    public Transport(String brand, String model, double engineSize, T driver) {
+    ArrayList<Mechanic> mechanic;
+
+    public Transport(String brand, String model, double engineSize, T driver, ArrayList<Mechanic> mechanic) {
         Brand = (brand == null || brand.length() == 0 ? "Default" : brand);
         Model = (model == null || brand.length() == 0 ? "Default" : model);
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
-
+        this.mechanic = mechanic;
     }
+
+
 
 
     // метод начать двежение
@@ -77,19 +81,12 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
 
     public abstract void passDiagnostic() throws TransportTypeException;
 
-
-    public void mechanicList() {
-        for (int i = 1; i <= 4; i++) {
-            Mechanic mechanic = new Mechanic(
-                    "Механик №" + i,
-                    "Компания №" + i);
-            ArrayList<Mechanic> mechanicList = new ArrayList<>();
-            mechanicList.add(mechanic);
-            System.out.println(mechanicList);
-        }
-
+    public static void main(String[] args) {
+        ArrayList<Mechanic> mechanicList = new ArrayList<>();
+        mechanicList.add(new Mechanic("Иван Иванов", "Данфосс"));
+        mechanicList.add(new Mechanic("Петр петров", "Мерседес"));
+        mechanicList.add(new Mechanic("Семен Семенов", "Вольво"));
     }
-
     }
 
 
