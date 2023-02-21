@@ -1,7 +1,6 @@
 package Transport;
 
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,10 +36,9 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         Model = (model == null || brand.length() == 0 ? "Default" : model);
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
-        List.of(
-                new Mechanic("Иван Иванов", "Данфсс"),
-                new Mechanic("Роман Романов", "Камаз")
-        );
+        ArrayList<Mechanic> mechanicList = new ArrayList<>();
+        mechanicList.add( new Mechanic("Иван Иванов", "Данфсс"));
+        mechanicList.add( new Mechanic("Петр петров", "Данфсс"));
     }
 
 
@@ -84,11 +82,14 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
 
     public abstract void passDiagnostic() throws TransportTypeException;
 
-    public static void main(String[] args) {
+    public void createMechanic (){
         ArrayList<Mechanic> mechanicList = new ArrayList<>();
         mechanicList.add(new Mechanic("Иван Иванов", "Данфосс"));
         mechanicList.add(new Mechanic("Петр петров", "Мерседес"));
         mechanicList.add(new Mechanic("Семен Семенов", "Вольво"));
+        ArrayList<Mechanic> mechanicList2 = new ArrayList<>(mechanicList);
+        System.out.println(mechanicList);
+
     }
     public boolean checkTransportNeedService() {
         try {
@@ -98,6 +99,7 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         }
         return true;
     }
+
     }
 
 

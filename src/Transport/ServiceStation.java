@@ -20,6 +20,4 @@ public class ServiceStation {
         System.out.print(queue.remove() + " ");
     }
 }
-
 }
-
