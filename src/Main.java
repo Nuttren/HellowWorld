@@ -27,7 +27,7 @@ public class Main {
                         "Car moder №" + i,
                         1.6,
                         carDriver,
-
+                        ArrayList <Mechanic> mechanic,
                         Cars.typeOfCar.SEDAN,
                         Type.CARS
                 );
