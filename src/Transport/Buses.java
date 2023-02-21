@@ -1,12 +1,13 @@
 package Transport;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Buses extends Transport <BusesDrivers> {
 
 
     public Buses(String brand, String model, double engineSize, BusesDrivers driver, numberOfSeats numberOfSeats, Type type) {
-        super(brand, model, engineSize, driver, );
+        super(brand, model, engineSize, driver);
         getType();
     }
 
@@ -98,8 +99,17 @@ public class Buses extends Transport <BusesDrivers> {
         } finally {
             System.out.println("Buses.passDiagnostic");
         }
-
     }
+
+    public boolean checkTransportNeedService() {
+        try {
+            passDiagnostic(); //проверяет что трансопрт имеет возможность проходить диагностику, должен быть переопределен в наследниках
+        } catch (TransportTypeException e) {
+            return false;
+        }
+        return true;
+    }
+
 }
 
 

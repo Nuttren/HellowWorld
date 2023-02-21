@@ -3,6 +3,7 @@ package Transport;
 
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Transport  <T extends Driver>  implements Compatible {
 
@@ -30,14 +31,16 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         this.driver = driver;
     }
 
-    ArrayList<Mechanic> mechanic;
 
-    public Transport(String brand, String model, double engineSize, T driver, ArrayList<Mechanic> mechanic) {
+    public Transport(String brand, String model, double engineSize, T driver) {
         Brand = (brand == null || brand.length() == 0 ? "Default" : brand);
         Model = (model == null || brand.length() == 0 ? "Default" : model);
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
-        this.mechanic = mechanic;
+        List.of(
+                new Mechanic("Иван Иванов", "Данфсс"),
+                new Mechanic("Роман Романов", "Камаз")
+        );
     }
 
 
@@ -86,6 +89,14 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         mechanicList.add(new Mechanic("Иван Иванов", "Данфосс"));
         mechanicList.add(new Mechanic("Петр петров", "Мерседес"));
         mechanicList.add(new Mechanic("Семен Семенов", "Вольво"));
+    }
+    public boolean checkTransportNeedService() {
+        try {
+            passDiagnostic(); //проверяет что трансопрт имеет возможность проходить диагностику, должен быть переопределен в наследниках
+        } catch (TransportTypeException e) {
+            return false;
+        }
+        return true;
     }
     }
 

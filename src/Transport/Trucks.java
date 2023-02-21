@@ -1,5 +1,7 @@
 package Transport;
 
+import java.util.ArrayList;
+
 public class Trucks extends Transport <TrucksDrives> {
 
 
@@ -93,6 +95,14 @@ public class Trucks extends Transport <TrucksDrives> {
     public void passDiagnostic()  {
         System.out.println(Type.TRUCKS.getType() + " должен пройти диагностику диагностику");
 
+    }
+    public boolean checkTransportNeedService() {
+        try {
+            passDiagnostic(); //проверяет что трансопрт имеет возможность проходить диагностику, должен быть переопределен в наследниках
+        } catch (TransportTypeException e) {
+            return false;
+        }
+        return true;
     }
 
 }

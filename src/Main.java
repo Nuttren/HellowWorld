@@ -1,11 +1,7 @@
 import Transport.*;
 
 import java.security.Key;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Collections;
+import java.util.*;
 
 public class Main {
         public static void main(String[] args) throws TransportTypeException {
@@ -27,7 +23,6 @@ public class Main {
                         "Car moder №" + i,
                         1.6,
                         carDriver,
-                        ArrayList <Mechanic> mechanic,
                         Cars.typeOfCar.SEDAN,
                         Type.CARS
                 );
@@ -67,7 +62,9 @@ public class Main {
                 System.out.println(autoList);
                 showDriver(car);
                 showMechanic(car);
-                car.mechanicList();
+                car.checkTransportNeedService();
+                truck.checkTransportNeedService();
+                bus.checkTransportNeedService();
 
                 }
             }

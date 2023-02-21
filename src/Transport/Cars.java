@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class Cars extends Transport <CarsDrives>{
 
-    public Cars(String brand, String model, double engineSize, CarsDrives driver, ArrayList<Mechanic> mechanic, typeOfCar typeOfCar, Type type) {
-        super(brand, model, engineSize, driver, mechanic);
+    public Cars(String brand, String model, double engineSize, CarsDrives driver, typeOfCar typeOfCar, Type type) {
+        super(brand, model, engineSize, driver);
         getType();
+
     }
 
     @Override
@@ -85,9 +86,19 @@ public class Cars extends Transport <CarsDrives>{
 
     @Override
     public void passDiagnostic() {
-        System.out.println(Type.CARS.getType() + " должен пройти диагностику диагностику");
+        System.out.println(Type.CARS.getType() + " должен пройти диагностику");
 
         }
+    @Override
+    public boolean checkTransportNeedService() {
+        try {
+            passDiagnostic(); //проверяет что трансопрт имеет возможность проходить диагностику, должен быть переопределен в наследниках
+        } catch (TransportTypeException e) {
+            return false;
+        }
+        return true;
+    }
+
 }
 
 
