@@ -23,6 +23,7 @@ public class Main {
                     "Car moder №" + i,
                     1.6,
                     carDriver,
+                    List.of(new Mechanic("Mechanic №"+i, "MechanicCompany №"+i)),
                     Cars.typeOfCar.SEDAN,
                     Type.CARS
             );
@@ -31,6 +32,7 @@ public class Main {
                     "Truck model №" + i,
                     2,
                     truckDriver,
+                    List.of(new Mechanic("Mechanic №"+i, "MechanicCompany №"+i)),
                     Trucks.loadСapacity.N3,
                     Type.TRUCKS
             );
@@ -39,6 +41,7 @@ public class Main {
                     "Bus moder №" + i,
                     1.7,
                     busDriver,
+                    List.of(new Mechanic("Mechanic №"+i, "MechanicCompany №"+i)),
                     Buses.numberOfSeats.LARGE,
                     Type.BUSES
 

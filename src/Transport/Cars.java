@@ -1,11 +1,12 @@
 package Transport;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cars extends Transport <CarsDrives>{
 
-    public Cars(String brand, String model, double engineSize, CarsDrives driver, typeOfCar typeOfCar, Type type) {
-        super(brand, model, engineSize, driver);
+    public Cars(String brand, String model, double engineSize, CarsDrives driver, List<Mechanic> mechanicList, typeOfCar typeOfCar, Type type) {
+        super(brand, model, engineSize, driver, mechanicList);
         getType();
 
     }

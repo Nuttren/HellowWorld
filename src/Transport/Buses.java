@@ -2,12 +2,13 @@ package Transport;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Buses extends Transport <BusesDrivers> {
 
 
-    public Buses(String brand, String model, double engineSize, BusesDrivers driver, numberOfSeats numberOfSeats, Type type) {
-        super(brand, model, engineSize, driver);
+    public Buses(String brand, String model, double engineSize, BusesDrivers driver, List<Mechanic> mechanicList, numberOfSeats numberOfSeats, Type type) {
+        super(brand, model, engineSize, driver, mechanicList);
         getType();
     }
 
