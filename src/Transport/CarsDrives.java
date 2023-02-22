@@ -1,6 +1,9 @@
 package Transport;
 
+import java.util.Objects;
+
 public class CarsDrives extends Driver{
+
 
     public CarsDrives(String name, boolean drivingLicences, int yearOfExperience) {
         super(name, drivingLicences, yearOfExperience);
@@ -20,4 +23,8 @@ public class CarsDrives extends Driver{
     public void fuelVehicle() {
         System.out.println("Водитель автомобиля " +getName() + " заправляет тс");
     }
+
+
+
+
 }

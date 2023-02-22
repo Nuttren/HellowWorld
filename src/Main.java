@@ -66,7 +66,10 @@ public class Main {
             truck.checkTransportNeedService();
             bus.checkTransportNeedService();
             passMaintanance(car, truck);
+
+
         }
+
     }
 
 
