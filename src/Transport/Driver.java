@@ -7,7 +7,7 @@ public abstract class Driver {
     public String toString() {
         return "Driver{" +
                 "Имя:" + name + '\'' +
-                ", Наличие прав:" + drivingLicences +
+                ", Наличие прав:" + isDrivingLicences() +
                 ", Стаж:" + yearOfExperience +
                 '}';
     }
@@ -19,7 +19,7 @@ public abstract class Driver {
 
     public Driver(String name, boolean drivingLicences, int yearOfExperience) {
         this.name = (name == null || name.length() == 0 ? "Иван Иванов" : name);
-        this.drivingLicences = false;
+        this.drivingLicences = drivingLicences;
         this.yearOfExperience = (yearOfExperience < 0 ? 0 : yearOfExperience);
 
     }

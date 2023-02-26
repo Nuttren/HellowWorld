@@ -1,10 +1,7 @@
 package Hash;
 import Transport.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,14 +20,23 @@ public class Main {
 
         Set<CarsDrives> driverListSet = new HashSet<>();
 
-        driverListSet.add(new CarsDrives("Иван Иванов", true, 5));
+
+        driverListSet.add(new CarsDrives("Иван Иванов", false, 5));
         driverListSet.add(new CarsDrives("Хрюн Моржов", true, 1));
         driverListSet.add(new CarsDrives("Иван Иванов", true, 5));
         driverListSet.add(new CarsDrives("Петр Петров", false, 10));
         driverListSet.add(new CarsDrives("Максим Максимов", true, 1));
         driverListSet.add(new CarsDrives("Федор Федоров", false, 1));
         driverListSet.add(new CarsDrives("Хрюн Моржов", true, 1));
-        System.out.println(Arrays.toString(driverListSet.toArray()));
+ //       System.out.println(Arrays.toString(driverListSet.toArray()));
+        Iterator<CarsDrives> iterName = driverListSet.iterator();
+        while (iterName.hasNext()) {
+            System.out.println(iterName.next());
+        }
+
+//        System.out.println(Arrays.toString(iterName.toString().toCharArray()));
+
+
 
     }
 }
