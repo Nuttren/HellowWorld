@@ -1,10 +1,7 @@
 package Transport;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public abstract class Transport  <T extends Driver>  implements Compatible {
     @Override
@@ -55,12 +52,18 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
         this.mechanicList = mechanicList;
-        HashMap<Transport, List <Mechanic>> transportMap = new HashMap<>();
-        for (Mechanic ignored : mechanicList) {
-            transportMap.put(this, mechanicList);
-        }
         }
 
+    public  void showMechanics () {
+    Map<Transport, List <Mechanic>> transportMap = new HashMap<>();
+//    for (Mechanic ignored : mechanicList) {
+        transportMap.put(this, mechanicList);
+  //      System.out.println(Arrays.toString(transportMap.toString().toCharArray()));
+        System.out.println(transportMap);
+ //   }
+
+
+}
 
 
     // метод начать двежение

@@ -58,17 +58,18 @@ public class Main {
 //                       car.passDiagnostic();
 //                       bus.passDiagnostic();
 //                      truck.passDiagnostic();
-            ArrayList<Transport> autoList = new ArrayList<>(List.of(car,truck,bus));
-            System.out.println(autoList);
-            showDriver(car);
-            showMechanic(car);
-            car.checkTransportNeedService();
-            truck.checkTransportNeedService();
-            bus.checkTransportNeedService();
-            passMaintanance(car, truck);
-            ServiceStation serviceStation = new ServiceStation();
-            serviceStation.addVehicleToQueue(car);
-            serviceStation.passMaintanance(car);
+//            ArrayList<Transport> autoList = new ArrayList<>(List.of(car,truck,bus));
+//            System.out.println(autoList);
+//            showDriver(car);
+//            showMechanic(car);
+//            car.checkTransportNeedService();
+//            truck.checkTransportNeedService();
+//            bus.checkTransportNeedService();
+//            passMaintanance(car, truck);
+//            ServiceStation serviceStation = new ServiceStation();
+//            serviceStation.addVehicleToQueue(car);
+//            serviceStation.passMaintanance(car);
+            car.showMechanics();
 
 
         }
