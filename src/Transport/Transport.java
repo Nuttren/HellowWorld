@@ -2,9 +2,23 @@ package Transport;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class Transport  <T extends Driver>  implements Compatible {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Transport)) return false;
+        Transport<?> transport = (Transport<?>) o;
+        return Double.compare(transport.getEngineSize(), getEngineSize()) == 0 && Objects.equals(getBrand(), transport.getBrand()) && Objects.equals(getModel(), transport.getModel()) && Objects.equals(getDriver(), transport.getDriver()) && Objects.equals(mechanicList, transport.mechanicList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBrand(), getModel(), getEngineSize(), getDriver(), mechanicList);
+    }
 
     private String Brand;
 
@@ -22,7 +36,8 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
     private double engineSize;
 
     private T driver;
-    private List<Mechanic> mechanicList;
+
+    private final List<Mechanic> mechanicList;
 
 
     public T getDriver() {
@@ -40,8 +55,11 @@ public abstract class Transport  <T extends Driver>  implements Compatible {
         this.engineSize = (engineSize <= 1 ? 1.7 : engineSize);
         setDriver(driver);
         this.mechanicList = mechanicList;
-    }
-
+        HashMap<Transport, List <Mechanic>> transportMap = new HashMap<>();
+        for (Mechanic ignored : mechanicList) {
+            transportMap.put(this, mechanicList);
+        }
+        }
 
 
 

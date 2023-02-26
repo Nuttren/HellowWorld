@@ -1,13 +1,14 @@
 package Transport;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Trucks extends Transport <TrucksDrives> {
 
 
     public Trucks(String brand, String model, double engineSize, TrucksDrives driver, List<Mechanic> mechanicList, loadСapacity loadСapacity, Type type) {
-        super(brand, model, engineSize, driver, mechanicList);
+        super(brand, model, engineSize, driver,mechanicList);
         getType();
     }
 

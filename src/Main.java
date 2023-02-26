@@ -66,6 +66,9 @@ public class Main {
             truck.checkTransportNeedService();
             bus.checkTransportNeedService();
             passMaintanance(car, truck);
+            ServiceStation serviceStation = new ServiceStation();
+            serviceStation.addVehicleToQueue(car);
+            serviceStation.passMaintanance(car);
 
 
         }
