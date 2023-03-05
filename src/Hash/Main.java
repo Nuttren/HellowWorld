@@ -6,7 +6,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-    ArrayList<CarsDrives> driverList = new ArrayList<CarsDrives>();
+        ArrayList<CarsDrives> driverList = new ArrayList<CarsDrives>();
 
         driverList.add(new CarsDrives("Иван Иванов", true, 5));
         driverList.add(new CarsDrives("Иван Иванов", true, 5));
@@ -16,6 +16,8 @@ public class Main {
         driverList.add(new CarsDrives("Федор Федоров", false, 1));
         driverList.add(new CarsDrives("Хрюн Моржов", true, 1));
         System.out.println(Arrays.toString(driverList.toArray()));
+
+
 
 
         Set<CarsDrives> driverListSet = new HashSet<>();
@@ -28,16 +30,11 @@ public class Main {
         driverListSet.add(new CarsDrives("Максим Максимов", true, 1));
         driverListSet.add(new CarsDrives("Федор Федоров", false, 1));
         driverListSet.add(new CarsDrives("Хрюн Моржов", true, 1));
- //       System.out.println(Arrays.toString(driverListSet.toArray()));
+        //       System.out.println(Arrays.toString(driverListSet.toArray()));
         Iterator<CarsDrives> iterName = driverListSet.iterator();
         while (iterName.hasNext()) {
             System.out.println(iterName.next());
         }
 
-//        System.out.println(Arrays.toString(iterName.toString().toCharArray()));
-
-
-
     }
 }
-
