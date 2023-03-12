@@ -1,10 +1,15 @@
 package Transport;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class Cars extends Transport <CarsDrives>{
 
-    public Cars(String brand, String model, double engineSize, CarsDrives driver, typeOfCar typeOfCar, Type type) {
-        super(brand, model, engineSize, driver);
+    public Cars(String brand, String model, double engineSize, CarsDrives driver, List<Mechanic> mechanicList, typeOfCar typeOfCar, Type type) {
+        super(brand, model, engineSize, driver, mechanicList);
         getType();
+
     }
 
     @Override
@@ -83,9 +88,19 @@ public class Cars extends Transport <CarsDrives>{
 
     @Override
     public void passDiagnostic() {
-        System.out.println(Type.CARS.getType() + " должен пройти диагностику диагностику");
+        System.out.println(Type.CARS.getType() + " должен пройти диагностику");
 
         }
+    @Override
+    public boolean checkTransportNeedService() {
+        try {
+            passDiagnostic(); //проверяет что трансопрт имеет возможность проходить диагностику, должен быть переопределен в наследниках
+        } catch (TransportTypeException e) {
+            return false;
+        }
+        return true;
+    }
+
 }
 
 

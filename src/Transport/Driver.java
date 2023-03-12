@@ -1,6 +1,16 @@
 package Transport;
 
+import java.util.Objects;
+
 public abstract class Driver {
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "Имя:" + name + '\'' +
+                ", Наличие прав:" + isDrivingLicences() +
+                ", Стаж:" + yearOfExperience +
+                '}';
+    }
 
     private String name;
     private boolean drivingLicences;
@@ -9,7 +19,7 @@ public abstract class Driver {
 
     public Driver(String name, boolean drivingLicences, int yearOfExperience) {
         this.name = (name == null || name.length() == 0 ? "Иван Иванов" : name);
-        this.drivingLicences = false;
+        this.drivingLicences = drivingLicences;
         this.yearOfExperience = (yearOfExperience < 0 ? 0 : yearOfExperience);
 
     }
@@ -42,4 +52,16 @@ public abstract class Driver {
     public abstract void stopMove ();
     public abstract void fuelVehicle ();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Driver)) return false;
+        Driver driver = (Driver) o;
+        return isDrivingLicences() == driver.isDrivingLicences() && getYearOfExperience() == driver.getYearOfExperience() && getName().equals(driver.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), isDrivingLicences(), getYearOfExperience());
+    }
 }
